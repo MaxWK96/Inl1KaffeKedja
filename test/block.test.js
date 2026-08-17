@@ -12,7 +12,7 @@ describe('Block', () => {
 
   it('producerar en annan hash om transaktioner ändras', () => {
     const block1 = new Block(0, '0', [{ sender: 'Sara', recipient: 'Nils', batchId: 1, weightKg: 10 }]);
-    const block2 = new Block(0, '0', [{ sender: 'Sara', recipient: 'Nils', batchId: 1, weightKg: 10 }]);
+    const block2 = new Block(0, '0', [{ sender: 'Sara', recipient: 'Nils', batchId: 2, weightKg: 10 }]);
 
     expect(block1.calculateHash()).not.toBe(block2.calculateHash());
   });
